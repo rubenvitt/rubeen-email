@@ -7,6 +7,7 @@ import {Button} from "@/components/ui/button";
 import {Textarea} from "@/components/ui/textarea";
 import {Label} from "@/components/ui/label";
 import {HiOutlineLockClosed, HiOutlineMail, HiOutlineClipboardCopy, HiOutlineCheckCircle, HiOutlineShieldCheck, HiOutlineKey} from "react-icons/hi";
+import {FiGithub} from "react-icons/fi";
 
 interface Props {
     handleSubmit: (s: string) => Promise<string>
@@ -55,8 +56,11 @@ export default function Contact({handleSubmit}: Props) {
                     <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-primary/10 mb-6">
                         <HiOutlineShieldCheck className="w-8 h-8 text-primary" />
                     </div>
+                    <p className="text-sm font-medium text-muted-foreground mb-2">
+                        Fullstack Software Engineer &bull; Software Architect
+                    </p>
                     <h1 className="text-4xl font-bold tracking-tight mb-4">
-                        Secure Contact
+                        Hi, I&apos;m Ruben
                     </h1>
                     <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
                         Send me an encrypted message using PGP encryption. Your privacy matters.
@@ -65,7 +69,7 @@ export default function Contact({handleSubmit}: Props) {
 
                 {/* Features */}
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
-                    <Card className="bg-card/50 backdrop-blur">
+                    <Card className="bg-card/50 backdrop-blur transition-all duration-200 hover:shadow-md hover:scale-[1.02] hover:bg-card">
                         <CardContent className="pt-6">
                             <div className="flex items-center gap-3 mb-2">
                                 <HiOutlineLockClosed className="w-5 h-5 text-primary" />
@@ -76,7 +80,7 @@ export default function Contact({handleSubmit}: Props) {
                             </p>
                         </CardContent>
                     </Card>
-                    <Card className="bg-card/50 backdrop-blur">
+                    <Card className="bg-card/50 backdrop-blur transition-all duration-200 hover:shadow-md hover:scale-[1.02] hover:bg-card">
                         <CardContent className="pt-6">
                             <div className="flex items-center gap-3 mb-2">
                                 <HiOutlineKey className="w-5 h-5 text-primary" />
@@ -87,7 +91,7 @@ export default function Contact({handleSubmit}: Props) {
                             </p>
                         </CardContent>
                     </Card>
-                    <Card className="bg-card/50 backdrop-blur">
+                    <Card className="bg-card/50 backdrop-blur transition-all duration-200 hover:shadow-md hover:scale-[1.02] hover:bg-card">
                         <CardContent className="pt-6">
                             <div className="flex items-center gap-3 mb-2">
                                 <HiOutlineMail className="w-5 h-5 text-primary" />
@@ -211,9 +215,22 @@ export default function Contact({handleSubmit}: Props) {
                 </Card>
 
                 {/* Footer */}
-                <p className="text-center text-sm text-muted-foreground mt-8">
-                    Include a link to your public PGP key if you&apos;d like an encrypted response.
-                </p>
+                <footer className="mt-12 pt-8 border-t border-border">
+                    <div className="flex flex-col items-center gap-4">
+                        <a
+                            href="https://github.com/rubenvitt"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors"
+                        >
+                            <FiGithub className="w-5 h-5" />
+                            <span>github.com/rubenvitt</span>
+                        </a>
+                        <p className="text-sm text-muted-foreground">
+                            Include a link to your public PGP key if you&apos;d like an encrypted response.
+                        </p>
+                    </div>
+                </footer>
             </div>
         </div>
     )
