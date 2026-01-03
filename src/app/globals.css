@@ -1,3 +1,19 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+
+/* Tailwind v4 Configuration */
+@theme {
+    --color-*: initial;
+    --font-*: initial;
+    --shadow-*: initial;
+    --radius-*: initial;
+    --spacing-*: initial;
+    --animate-*: initial;
+    --breakpoint-*: initial;
+
+    /* Custom theme extensions */
+    --background-image-gradient-radial: radial-gradient(var(--tw-gradient-stops));
+    --background-image-gradient-conic: conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops));
+}
+
+/* Import Tailwind Forms plugin */
+@plugin "@tailwindcss/forms";

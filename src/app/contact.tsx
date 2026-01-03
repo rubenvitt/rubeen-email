@@ -157,7 +157,6 @@ export default function Contact({handleSubmit}: Props) {
                       id="message"
                       rows={10}
                       className="block w-full rounded-md border-0 bg-white/5 px-3.5 py-2 dark:text-white text-gray-900 shadow-sm ring-1 ring-inset dark:ring-white/10 ring-gray-900/10 focus:ring-2 focus:ring-inset focus:ring-indigo-500 sm:text-sm sm:leading-6"
-                      defaultValue={''}
                   />
                                     </div>
                                 </div>
